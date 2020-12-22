@@ -2,7 +2,6 @@
 //  iNewtonUITests.swift
 //  iNewtonUITests
 //
-//  Created by 谷山卓朗 on 2020/12/22.
 //
 
 import XCTest
