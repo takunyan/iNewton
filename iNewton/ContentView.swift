@@ -9,11 +9,11 @@ import SpriteKit
 
 struct ContentView: View {
     var scene: SKScene {
-        let scene = TopScene()
-        scene.size = CGSize(width: 375, height: 570)
+        let scene = TopScene(size: CGSize(width: 375, height: 570))
         scene.scaleMode = .fill
         return scene
     }
+    
     var body: some View {
         NavigationView {
             SpriteView(scene: scene)
@@ -22,7 +22,7 @@ struct ContentView: View {
                 .overlay(
                     Text("iNewton")
                         .foregroundColor(.gray)
-                        .font(.largeTitle)
+                        .font(.custom("default", size: 70))
                     ,alignment: .top)
                 //                .overlay(
                 //                    Image("title2")
@@ -30,11 +30,18 @@ struct ContentView: View {
                 //                    ,alignment: .top)
                 .overlay(
                     NavigationLink(destination: AltitudeView()) {
+                        //                        Text("Throw")
+                        //                            .foregroundColor(.gray)
+                        //                            .font(.largeTitle)
                         Image("PlayButton")
                             .resizable()
-                            .frame(width: 130.0, height: 60.0)
+                            .frame(width: 170.0, height: 80.0)
+                            // 枠線を10pxで描画する
+                            .border(Color.white, width: 10)
+                            // Imageに対して角丸を描画する
+                            .cornerRadius(30)
                     }
-                    .offset(y: -70),
+                    .offset(y: -100),
                     alignment: .bottom)
                 .statusBar(hidden: true)
             
