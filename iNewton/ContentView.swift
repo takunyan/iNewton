@@ -8,7 +8,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        AltitudeView()
+        TopView()
+            .statusBar(hidden: true)
+            .preferredColorScheme(.light)
     }
 }
 

@@ -15,6 +15,7 @@
 		987AFD6225917DCA004B8EC4 /* iNewtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AFD6125917DCA004B8EC4 /* iNewtonUITests.swift */; };
 		987AFD7325917E22004B8EC4 /* AltitudeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AFD7225917E22004B8EC4 /* AltitudeDataModel.swift */; };
 		987AFD7825917E39004B8EC4 /* AltitudeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AFD7725917E39004B8EC4 /* AltitudeView.swift */; };
+		987AFD85259193FC004B8EC4 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AFD84259193FC004B8EC4 /* TopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		987AFD6325917DCA004B8EC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		987AFD7225917E22004B8EC4 /* AltitudeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltitudeDataModel.swift; sourceTree = "<group>"; };
 		987AFD7725917E39004B8EC4 /* AltitudeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltitudeView.swift; sourceTree = "<group>"; };
+		987AFD84259193FC004B8EC4 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; tabWidth = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				987AFD4A25917DCA004B8EC4 /* Preview Content */,
 				987AFD7225917E22004B8EC4 /* AltitudeDataModel.swift */,
 				987AFD7725917E39004B8EC4 /* AltitudeView.swift */,
+				987AFD84259193FC004B8EC4 /* TopView.swift */,
 			);
 			path = iNewton;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				987AFD7825917E39004B8EC4 /* AltitudeView.swift in Sources */,
+				987AFD85259193FC004B8EC4 /* TopView.swift in Sources */,
 				987AFD7325917E22004B8EC4 /* AltitudeDataModel.swift in Sources */,
 				987AFD4725917DC6004B8EC4 /* ContentView.swift in Sources */,
 				987AFD4525917DC6004B8EC4 /* iNewtonApp.swift in Sources */,
