@@ -15,34 +15,58 @@ struct AltitudeView: View {
     var body: some View {
         VStack(spacing: 30) {
             VStack(spacing: 30) {
-                Text("\(manager.altitudeNumber)")
-                Text(availabe ? manager.altitudeString : "----")
-                Text("開始高度：\(manager.altitudeFrom)")
-                Text("最高高度:\(manager.highestAltitude)")
-                Text("終了高度：\(manager.altitudeTo)")
-                Text("差：\(manager.record)")
+//                Text("\(manager.altitudeNumber)")
+//                Text(availabe ? manager.altitudeString : "----")
+//                Text("開始高度：\(manager.altitudeFrom)")
+//                Text("最高高度:\(manager.highestAltitude)")
+//                Text("終了高度：\(manager.altitudeTo)")
+//                Text("差：\(manager.record)")
                 Text(manager.recordString)
+                    .foregroundColor(.gray)
+                    .font(.custom("default", size: 60))
+                
                 
             }
+            Spacer()
             HStack(spacing: 30) {
                 Button(action: {
                     self.manager.startRecording()
                 }) {
                     Text("開始")
+                        .foregroundColor(Color.red)
                 }
+                .padding(.all)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.red, lineWidth: 1)
+                )
                 Button(action: {
                     self.manager.finishRecording()
-                   
+                    
                 }) {
                     Text("終了")
+                        .foregroundColor(Color.red)
                 }
+                .padding(.all)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.red, lineWidth: 1)
+                )
                 Button(action: {
                     self.manager.doReset()
                 }) {
                     Text("リセット")
+                        .foregroundColor(Color.red)
                 }
+                .padding(.all)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.red, lineWidth: 1)
+                )
             }
+            .offset(y: -20)
         }
+        .preferredColorScheme(.light)
     }
 }
 

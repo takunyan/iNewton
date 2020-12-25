@@ -20,7 +20,7 @@ class AltimatorManager: NSObject, ObservableObject {
     @Published var altitudeTo:Double = 0
     @Published var highestAltitude:Double = 0
     @Published var record:Double = 0
-    @Published var recordString:String = ""
+    @Published var recordString:String = "iPhone Throwing Record:"
     
     override init() {
         super.init()
@@ -29,6 +29,7 @@ class AltimatorManager: NSObject, ObservableObject {
     }
     
     func doReset(){
+        self.recordString = "iPhone Throwing Record:"
         altimeter?.stopRelativeAltitudeUpdates()
         startUpdate()
     }
@@ -41,11 +42,11 @@ class AltimatorManager: NSObject, ObservableObject {
         altitudeTo = self.highestAltitude
         record = fabs(altitudeTo - altitudeFrom)
         if record >= 1.0 {
-            self.recordString = String(format: "iPhone Throwing Record:%.2f m",record)
+            self.recordString = String(format: "iPhone Throwing Record:\n%.2f m",record)
         } else if 1.0 > record && record >= 0.01 {
-            self.recordString = String(format: "iPhone Throwing Record:%.2f cm",record * 100)
+            self.recordString = String(format: "iPhone Throwing Record:\n%.2f cm",record * 100)
         } else {
-            self.recordString = String(format: "iPhone Throwing Record:% mm",record * 100000)
+            self.recordString = String(format: "iPhone Throwing Record:\n% mm",record * 100000)
         }
         
     }
