@@ -29,7 +29,11 @@ class AltimatorManager: NSObject, ObservableObject {
     }
     
     func doReset(){
+        self.altitudeTo = 0
+        self.altitudeFrom = 0
+        self.highestAltitude = 0
         self.recordString = "iPhone Throwing Record:"
+        self.record = 0
         altimeter?.stopRelativeAltitudeUpdates()
         startUpdate()
     }
@@ -38,6 +42,7 @@ class AltimatorManager: NSObject, ObservableObject {
         altitudeFrom = self.altitudeNumber
     }
     
+    //FIXME sometime " m" is shown
     func finishRecording(){
         altitudeTo = self.highestAltitude
         record = fabs(altitudeTo - altitudeFrom)
